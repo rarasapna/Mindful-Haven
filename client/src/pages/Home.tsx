@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { ArrowRight, BookHeart, Sparkles, PenLine } from "lucide-react";
+import { ArrowRight, BookHeart, Sparkles, PenLine, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/images/hero.png";
 import learnImg from "@/assets/images/learn.png";
