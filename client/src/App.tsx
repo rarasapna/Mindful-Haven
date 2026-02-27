@@ -5,14 +5,31 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import Home from "@/pages/Home";
+import Learn from "@/pages/Learn";
+import Tools from "@/pages/Tools";
+import Journal from "@/pages/Journal";
+import About from "@/pages/About";
+
 function Router() {
   return (
-    <Switch>
-      {/* Add pages below */}
-      {/* <Route path="/" component={Home}/> */}
-      {/* Fallback to 404 */}
-      <Route component={NotFound} />
-    </Switch>
+    <div className="flex flex-col min-h-screen">
+      <Nav />
+      <main className="flex-grow">
+        <Switch>
+          <Route path="/" component={Home}/>
+          <Route path="/learn" component={Learn}/>
+          <Route path="/tools" component={Tools}/>
+          <Route path="/journal" component={Journal}/>
+          <Route path="/about" component={About}/>
+          {/* Fallback to 404 */}
+          <Route component={NotFound} />
+        </Switch>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
